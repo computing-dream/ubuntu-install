@@ -49,6 +49,12 @@ Thu Feb 29 07:07:23 2024
 +---------------------------------------------------------------------------------------+
 ```
 ## 2. Cuda Toolkit 12-3 deb (local)
+
+
+Install the CUDA toolkit system wide. You can find the installation guide on the NVIDIA website:
+
+[CUDA Installation Guide](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#)
+
 In order to use Cuda Toolkit we need to install the `gcc` compiler through `apt get`.
 ```bash
 sudo apt install gcc
@@ -58,12 +64,17 @@ Verify the installation with
 gcc --version
 ```
 
-Install the CUDA toolkit system wide. You can find the installation guide on the NVIDIA website:
+The toolkit can be downloaded using the following commands:
 
-[CUDA Installation Guide](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#)
-
-The toolkit can be downloaded from the following link:
-
+```bash
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-ubuntu2404.pinsudo
+mv cuda-ubuntu2404.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget https://developer.download.nvidia.com/compute/cuda/12.6.2/local_installers/cuda-repo-ubuntu2404-12-6-local_12.6.2-560.35.03-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu2404-12-6-local_12.6.2-560.35.03-1_amd64.deb
+sudo cp /var/cuda-repo-ubuntu2404-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get -y install cuda-toolkit-12-6
+```
 
 ## THESE INSTRUCTIONS ARE FOR UBUNTU 22.04 (OLD)
 The commands in this readme are for **Ubuntu 22.04**. You can follow similar steps for other Ubuntu versions however the commands will be slightly different. Instructions last updated **Mar 3 2024**.
