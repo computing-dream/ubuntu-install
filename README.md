@@ -48,7 +48,17 @@ Thu Feb 29 07:07:23 2024
 |    0   N/A  N/A      2083      G   /usr/bin/gnome-shell                        146MiB |
 +---------------------------------------------------------------------------------------+
 ```
+## 3. Install `gcc` compiler
+```bash
+sudo apt install gcc
+```
+## 2. Cuda Toolkit 12-3 deb (local)
 
+Install the CUDA toolkit system wide. You can find the installation guide on the NVIDIA website:
+
+[CUDA Installation Guide](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#)
+
+The toolkit can be downloaded from the following link:
 
 
 ## THESE INSTRUCTIONS ARE FOR UBUNTU 22.04 (OLD)
