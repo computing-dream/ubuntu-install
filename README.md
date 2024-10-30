@@ -48,7 +48,7 @@ Thu Feb 29 07:07:23 2024
 |    0   N/A  N/A      2083      G   /usr/bin/gnome-shell                        146MiB |
 +---------------------------------------------------------------------------------------+
 ```
-## 2. Cuda Toolkit 12-3 deb (local)
+## 2. Cuda Toolkit 12-6 deb (local)
 
 
 Install the CUDA toolkit system wide. You can find the installation guide on the NVIDIA website:
