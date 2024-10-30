@@ -76,6 +76,21 @@ sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-6
 ```
 
+After installation, remember to add CUDA paths to your profile as shown in the Post-Installation Actions section of the CUDA Installation Guide:
+
+```bash
+export PATH=/usr/local/cuda-12.6/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+Reboot the system:
+```bash
+sudo reboot
+```
+and verify the installation with 
+```bash
+nvcc --version
+```
+
 ## THESE INSTRUCTIONS ARE FOR UBUNTU 22.04 (OLD)
 The commands in this readme are for **Ubuntu 22.04**. You can follow similar steps for other Ubuntu versions however the commands will be slightly different. Instructions last updated **Mar 3 2024**.
 
