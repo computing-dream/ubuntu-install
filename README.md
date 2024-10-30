@@ -48,11 +48,15 @@ Thu Feb 29 07:07:23 2024
 |    0   N/A  N/A      2083      G   /usr/bin/gnome-shell                        146MiB |
 +---------------------------------------------------------------------------------------+
 ```
-## 3. Install `gcc` compiler
+## 2. Cuda Toolkit 12-3 deb (local)
+In order to use Cuda Toolkit we need to install the `gcc` compiler through `apt get`.
 ```bash
 sudo apt install gcc
 ```
-## 2. Cuda Toolkit 12-3 deb (local)
+Verify the installation with
+```bash
+gcc --version
+```
 
 Install the CUDA toolkit system wide. You can find the installation guide on the NVIDIA website:
 
